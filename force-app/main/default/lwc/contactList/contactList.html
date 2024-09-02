@@ -1,0 +1,16 @@
+<template>
+    <template if:true={contacts}>
+        <lightning-datatable
+            key-field="id"
+            data={contacts}
+            columns={columns}
+            hide-checkbox-column
+        >
+        </lightning-datatable>
+    </template>
+    <template if:true={errors}>
+        <div class="slds-text-color_error">
+            <p>Error loading contacts: {errorMessages}</p>
+        </div>
+    </template>
+</template>
